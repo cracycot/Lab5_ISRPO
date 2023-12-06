@@ -1,0 +1,43 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>com.example.demo8</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>Demo8</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="support@yourcompany.com" url="https://www.yourcompany.com">YourCompany</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[
+    Enter short description for your plugin here.<br>
+    <em>most HTML tags may be used</em>
+  ]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    <actions>
+        <action id="Plugin" class="Plugin" text="Eight_plugin">
+            <add-to-group group-id="ActivateToolWindowActions" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="1" second-keystroke="2"/>
+        </action>
+        <action id="Plugin_" class="Plugin_" text="fsc;edls">
+            <add-to-group group-id="$LRU" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="5" second-keystroke="6"/>
+        </action>
+        <action id="Plugin_1" class="Plugin_1" text="dksc;ls">
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl ESCAPE"/>
+        </action>
+    </actions>
+</idea-plugin>
